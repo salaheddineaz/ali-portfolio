@@ -41,8 +41,9 @@ function Model() {
       (targetRotation.current.x - groupRef.current.rotation.x) * 0.04
 
     if (materialRef.current) {
-      const hue = 0.62 + Math.sin(state.clock.elapsedTime * 0.15) * 0.04
-      materialRef.current.color.setHSL(hue, 0.6, 0.25)
+      const glow = 0.05 + Math.sin(state.clock.elapsedTime * 0.5) * 0.05
+      materialRef.current.emissive = new THREE.Color("#3B82F6")
+      materialRef.current.emissiveIntensity = glow
     }
   })
 
@@ -63,8 +64,6 @@ function GlowRings() {
     groupRef.current.rotation.y = state.clock.elapsedTime * 0.4
   })
 
-  const ringColors = ["#3B82F6", "#60A5FA", "#3B82F6"]
-
   return (
     <group ref={groupRef} position={[0, 0.5, 0]}>
       {[0, 1, 2].map((i) => (
@@ -75,9 +74,9 @@ function GlowRings() {
         >
           <ringGeometry args={[1.0 + i * 0.2, 1.05 + i * 0.2, 48]} />
           <meshBasicMaterial
-            color={ringColors[i]}
+            color="#3B82F6"
             transparent
-            opacity={0.12 - i * 0.03}
+            opacity={0.3 - i * 0.08}
             side={THREE.DoubleSide}
           />
         </mesh>

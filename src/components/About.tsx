@@ -7,7 +7,8 @@ import { Code2, Building2, GraduationCap } from "lucide-react"
 const stats = [
   { label: "Technologies Used", value: "15+", icon: Code2 },
   { label: "Projects Built", value: "10+", icon: Building2 },
-  { label: "Years Learning", value: "3+", icon: GraduationCap },
+  { label: "Engineering", value: "5+", icon: GraduationCap },
+  { label: "Web Development", value: "3+", icon: Code2 },
 ]
 
 export function About() {
@@ -70,7 +71,7 @@ export function About() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.1}>
               <div className="group bg-surface/50 border border-white/5 rounded-xl p-6 text-center hover:border-primary/20 transition-all duration-300">

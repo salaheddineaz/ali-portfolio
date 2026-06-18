@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Reveal } from "@/components/Reveal"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -7,36 +8,58 @@ import { ExternalLink, GitBranch } from "lucide-react"
 
 const projects = [
   {
-    title: "Automation Control System",
+    title: "Portfolio Website",
     description:
-      "Designed and implemented a PLC-based control system for industrial automation with real-time monitoring and data logging capabilities.",
-    tech: ["PLC", "MATLAB", "Python", "SCADA"],
-    github: "#",
+      "A premium personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and Three.js. Features a dark theme, 3D interactive robotic arm, scroll animations, and fully responsive design.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Three.js", "Framer Motion"],
+    github: "https://github.com/salaheddineaz/portfolio",
     demo: "#",
+    image: "/images/portfolio-pic.png",
   },
   {
-    title: "Full-Stack Web Application",
+    title: "Omnifood",
     description:
-      "Built a modern web application with Next.js, TypeScript, and PostgreSQL featuring authentication, real-time updates, and responsive design.",
-    tech: ["Next.js", "TypeScript", "PostgreSQL", "Supabase"],
-    github: "#",
-    demo: "#",
+      "A modern, fully responsive landing page for a healthy meal delivery service. Features a clean design, mobile-first approach, and smooth animations. Built as part of Jonas Schmedtmann's Udemy course.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+    github: "https://github.com/salaheddineaz/01-Omnifood",
+    demo: "https://salaheddineaz.github.io/omnifood",
+    image: "/images/omnifood-pic.png",
   },
   {
-    title: "Robotics Simulation",
+    title: "Prof Anes Portfolio",
     description:
-      "Developed a robotic arm simulation using Python and ROS, incorporating inverse kinematics and path planning algorithms.",
-    tech: ["Python", "ROS", "C++", "Simulink"],
-    github: "#",
-    demo: "#",
+      "A polished academic portfolio website for Professor Anes showcasing publications, research projects, courses, and professional achievements. Features a clean, scholarly design with smooth scrolling, responsive layout, and publication filtering.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "CSS Grid"],
+    github: "https://github.com/salaheddineaz/03-cours",
+    demo: "https://salaheddineaz.github.io/prof-anes/",
+    image: "/images/prof-anes-portfolio.png",
   },
   {
-    title: "API Gateway Service",
+    title: "Guess Number Game",
     description:
-      "Created a scalable REST API gateway with Express.js, implementing rate limiting, caching, and microservice orchestration.",
-    tech: ["Node.js", "Express.js", "Docker", "MongoDB"],
-    github: "#",
-    demo: "#",
+      "An interactive number guessing game where players try to guess a secret number between 1 and 20. Features score tracking, high score system, and visual feedback for user guesses.",
+    tech: ["HTML5", "CSS3", "JavaScript", "DOM Manipulation"],
+    github: "https://github.com/salaheddineaz/04-GuessNumber",
+    demo: "https://salaheddineaz.github.io/Guess-number/",
+    image: "/images/guess-number-pic.png",
+  },
+  {
+    title: "Greed Dice",
+    description:
+      "A classic dice game implementation (also known as Pig Game) where two players take turns rolling a die. Features hold/roll mechanics, score accumulation, and first-to-100-wins logic with smooth UI transitions.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Game Logic", "DOM Events"],
+    github: "https://github.com/salaheddineaz/05-DiceGame",
+    demo: "https://salaheddineaz.github.io/greed-dice",
+    image: "/images/greed-dice-pic.png",
+  },
+  {
+    title: "Cinescope",
+    description:
+      "A movie discovery and browsing application with a modern dark theme UI. Features movie listings, search functionality, genre filtering, and detailed movie views with ratings.",
+    tech: ["HTML5", "CSS3", "JavaScript", "API Integration", "Responsive Design"],
+    github: "https://github.com/salaheddineaz/06-cinescope-final",
+    demo: "https://salaheddineaz.github.io/cinescope-dz/",
+    image: "/images/cinescope-dz-pic.png",
   },
 ]
 
@@ -55,14 +78,18 @@ export function Projects() {
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
             <Reveal key={project.title} delay={i * 0.1}>
               <div className="group relative bg-surface/30 border border-white/5 rounded-xl overflow-hidden hover:border-primary/20 transition-all duration-500">
-                <div className="h-40 sm:h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/20" />
-                  </div>
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 </div>
                 <div className="p-5 sm:p-6">
                   <h3 className="text-base sm:text-lg font-semibold text-text mb-2 group-hover:text-primary transition-colors duration-300">
@@ -80,7 +107,7 @@ export function Projects() {
                     <Button variant="secondary" size="sm" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <GitBranch size={14} className="mr-1" />
-                        GitHub
+                        Code
                       </a>
                     </Button>
                     <Button variant="outline" size="sm" asChild>

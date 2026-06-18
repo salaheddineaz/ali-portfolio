@@ -1,40 +1,64 @@
 "use client"
 
 import { Reveal } from "@/components/Reveal"
-import { GraduationCap, User, Code2 } from "lucide-react"
+import { GraduationCap, Code2, BookOpen, Award, Briefcase, Cpu, Rocket } from "lucide-react"
 
 const timeline = [
   {
-    title: "Master's Degree in Automation & Industrial Informatics",
-    subtitle: "University",
-    period: "2024 - Present",
+    title: "The Beginning",
+    subtitle: "National Polytechnic School of Algiers",
+    period: "2022 – 2024",
     description:
-      "Advanced studies in control systems, industrial automation, robotics, and intelligent systems design.",
-    icon: GraduationCap,
+      "Started my engineering journey at the National Polytechnic School of Algiers, where I developed a strong foundation in mathematics, physics, engineering fundamentals, and analytical problem-solving.",
+    icon: Rocket,
+  },
+  {
+    title: "First Steps into Web Development",
+    subtitle: "Self-Learning",
+    period: "2023",
+    description:
+      "Earned certifications in Responsive Web Design and JavaScript while building my first interactive web projects and discovering a passion for software development.",
+    icon: BookOpen,
+  },
+  {
+    title: "Expanding My Programming Skills",
+    subtitle: "Advanced Training",
+    period: "2024",
+    description:
+      "Completed Advanced Python training and deepened my understanding of software engineering, automation, and problem-solving through code.",
+    icon: Code2,
   },
   {
     title: "Bachelor's Degree in Electronics",
-    subtitle: "University",
-    period: "2020 - 2023",
+    subtitle: "University of Mostaganem",
+    period: "2024 – 2025",
     description:
-      "Solid foundation in electronics, embedded systems, circuit design, and signal processing.",
+      "Graduated from the University of Mostaganem with a Bachelor's Degree in Electronics, strengthening my expertise in electronic systems, automation, and industrial technologies.",
+    icon: Award,
+  },
+  {
+    title: "Master's Degree in Automation & Industrial Informatics",
+    subtitle: "University of Mostaganem",
+    period: "2025 – Present",
+    description:
+      "Currently completing my Master's degree, focusing on automation systems, intelligent systems, industrial informatics, robotics, and control engineering.",
     icon: GraduationCap,
   },
   {
-    title: "Personal Development Journey",
-    subtitle: "Self-Learning & Growth",
-    period: "2023 - Present",
+    title: "Modern Full-Stack Development",
+    subtitle: "Professional Growth",
+    period: "2025 – 2026",
     description:
-      "Continuous self-study in full-stack web development, cloud technologies, and modern software engineering practices.",
-    icon: User,
+      "Specialized in React, Next.js, Node.js, PostgreSQL, Supabase, and modern web technologies while developing professional-grade applications and real-world projects.",
+    icon: Cpu,
   },
   {
-    title: "Freelance and Personal Projects",
+    title: "Freelance Developer & Lifelong Learner",
     subtitle: "Independent Work",
-    period: "2022 - Present",
+    period: "Today",
     description:
-      "Building web applications, automation tools, and engineering solutions for real-world problems.",
-    icon: Code2,
+      "Building modern digital solutions for clients and personal projects while continuously expanding my expertise in software engineering, automation, and intelligent systems.",
+    icon: Briefcase,
   },
 ]
 

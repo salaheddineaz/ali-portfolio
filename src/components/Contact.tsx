@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Send, GitBranch, Globe, Mail, MapPin, Phone } from "lucide-react"
+import { Send, GitBranch, Link2, Mail, MapPin, Phone } from "lucide-react"
 
 export function Contact() {
   const [sent, setSent] = useState(false)
@@ -60,6 +60,7 @@ export function Contact() {
                   href="https://github.com/salaheddineaz"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="GitHub"
                   className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                 >
                   <GitBranch size={18} />
@@ -68,12 +69,14 @@ export function Contact() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="LinkedIn"
                   className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                 >
-                  <Globe size={18} />
+                  <Link2 size={18} />
                 </a>
                 <a
                   href="mailto:alisalaheddinea@gmail.com"
+                  title="Email"
                   className="w-11 h-11 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-muted hover:text-primary hover:border-primary/30 hover:bg-primary/10 transition-all duration-300"
                 >
                   <Mail size={18} />
