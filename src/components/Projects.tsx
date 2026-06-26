@@ -13,7 +13,7 @@ const projects = [
       "A comprehensive developer roadmap platform guiding beginners from zero to job-ready full-stack developers. Features 10 curated topics, 12 projects, premium courses, global search, and a sleek dark theme with glassmorphism design.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "SSG"],
     github: "https://github.com/salaheddineaz/edu-platform",
-    demo: "https://edu-platform-two-omega.vercel.app",
+    demo: "https://a-dev-platform.vercel.app",
     image: "/images/edu-platform-pic.png",
   },
   {
