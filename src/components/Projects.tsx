@@ -8,6 +8,15 @@ import { ExternalLink, GitBranch } from "lucide-react"
 
 const projects = [
   {
+    title: "A.Edu — Developer Roadmap",
+    description:
+      "A comprehensive developer roadmap platform guiding beginners from zero to job-ready full-stack developers. Features 10 curated topics, 12 projects, premium courses, global search, and a sleek dark theme with glassmorphism design.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "SSG"],
+    github: "https://github.com/salaheddineaz/edu-platform",
+    demo: "https://edu-platform-two-omega.vercel.app",
+    image: "/images/edu-platform-pic.png",
+  },
+  {
     title: "Portfolio Website",
     description:
       "A premium personal portfolio website built with Next.js 15, TypeScript, Tailwind CSS, Framer Motion, and Three.js. Features a dark theme, 3D interactive robotic arm, scroll animations, and fully responsive design.",
